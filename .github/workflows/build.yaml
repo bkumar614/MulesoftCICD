@@ -64,7 +64,7 @@ jobs:
         USERNAME: ${{secretS.ANYPOINT_USERNAME}}
         PASSWORD: ${{secretS.ANYPOINT_PASSWORD}}
       run: |
-        artifactName=$(ls *.jar | head -l)
+        artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy \
         -Danypoint.username="$USERNAME"\
         -Danypoint.password="$PASSWORD"
