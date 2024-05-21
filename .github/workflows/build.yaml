@@ -25,6 +25,8 @@ jobs:
           check-latest: false
           cache: maven
       - name: Maven verify
+        run: mvn clean verify
+      - name: Maven compile
         run: mvn clean compile
-      - name: Build Mule application
-        run: mvn clean package
+      - name: Maven package 
+        run: mvn -B package --file pom.xml 
