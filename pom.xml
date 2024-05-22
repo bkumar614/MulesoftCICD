@@ -48,7 +48,7 @@
 							<anypoint.platform.cliend_secret>${platformClientSecret}</anypoint.platform.cliend_secret>
 							<anypoint.platform.base_uri>${anypointBaseUri}</anypoint.platform.base_uri>
 							<anypoint.platform.analytics_base_uri>${anypointBaseUri}</anypoint.platform.analytics_base_uri>
-							<mule.env>${propertiesEnvironment}</mule.env?
+							<mule.env>${propertiesEnvironment}</mule.env>
 							<mule.vault.key>${vaultKey}</mule.vault.key>
 						</properties>
 						<!-- End: SECURED PROPERTIES CI/CD -->
