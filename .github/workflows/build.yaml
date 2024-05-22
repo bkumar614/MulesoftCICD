@@ -70,5 +70,5 @@ jobs:
         -Danypoint.username="$USERNAME" \
         -Danypoint.password="$PASSWORD" \
         -Denv=Sandbox \
-        -Dskiltests
+        -Dskiptests
     
