@@ -44,12 +44,11 @@
 						<!-- Start: SECURED PROPERTIES CI/CD -->
 						<properties>
 							<secure.key>${decryption.key}</secure.key>
-<<<<<<< HEAD
+
 						</properties>
 						<!-- End: SECURED PROPERTIES CI/CD -->
 					</cloudHubDeployment>
 					<classifier>---- select project type ----</classifier>
-=======
 							<anypoint.platform.cliend_id>${platformClientId}</anypoint.platform.cliend_id>
 							<anypoint.platform.cliend_secret>${platformClientSecret}</anypoint.platform.cliend_secret>
 							<anypoint.platform.base_uri>${anypointBaseUri}</anypoint.platform.base_uri>
@@ -60,7 +59,6 @@
 						<!-- End: SECURED PROPERTIES CI/CD -->
 					</cloudHubDeployment>
 					<classifier>mule-application</classifier>
->>>>>>> e7db0c9b6a4dadb4218c5bdab80dbbd7c4a1084b
 				</configuration>
 			</plugin>
 		</plugins>
