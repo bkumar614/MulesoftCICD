@@ -49,8 +49,8 @@ jobs:
     env: 
         #USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
         #PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
-        CA_CLIENT_ID: ${{secret.CA_CLIENT_ID}}
-        CA_CLIENT_SECRET: ${{secret.CA_CLIENT_SECRET}}
+        CA_CLIENT_ID: ${{secrets.CA_CLIENT_ID}}
+        CA_CLIENT_SECRETS: ${{secrets.CA_CLIENT_SECRETs}}
     steps: 
     - name: Checkout Repository 
       uses: actions/checkout@v3
