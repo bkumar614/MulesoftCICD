@@ -47,10 +47,10 @@ jobs:
     needs: Build 
     runs-on: ubuntu-latest
     env: 
-        #USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
-        #PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
-        CA_CLIENT_ID: ${{secrets.CA_CLIENT_ID}}
-        CA_CLIENT_SECRETS: ${{secrets.CA_CLIENT_SECRETs}}
+        USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
+        PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
+        #CA_CLIENT_ID: ${{secrets.CA_CLIENT_ID}}
+        #CA_CLIENT_SECRETS: ${{secrets.CA_CLIENT_SECRETs}}
     steps: 
     - name: Checkout Repository 
       uses: actions/checkout@v3
@@ -72,8 +72,8 @@ jobs:
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy -e \
         -Dmule.artifact=$artifactName \
-        #-Danypoint.username="$USERNAME" \
-        #-Danypoint.password="$PASSWORD" \
+        -Danypoint.username="$USERNAME" \
+        -Danypoint.password="$PASSWORD" \
         -Denv=Sandbox \
         -DskipDeploymentVerification="true"
         -Dskiptests
