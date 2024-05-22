@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 name: Deploy Mulesoft Application
 on:
@@ -160,4 +159,3 @@ jobs:
         -DskipDeploymentVerification="true"
         -Dskiptests
     
->>>>>>> e7db0c9b6a4dadb4218c5bdab80dbbd7c4a1084b
