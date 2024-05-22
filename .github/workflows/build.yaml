@@ -24,10 +24,12 @@ jobs:
           java-version: 17
           check-latest: false
           cache: maven
-      - name: Maven Buil and package 
+      - name: Maven Build and Package 
         run: mvn clean verify
-             mvn clean compile
-             mvn -B package --file pom.xml
+      - name: Maven Build and Package
+        run: mvn clean compile
+      - name: Maven Build and Package
+        run: mvn -B package --file pom.xml
       - name: Stamp artifact file name with commit hash
         run: |
           artifactName1=$(ls target/*.jar | head -1)
