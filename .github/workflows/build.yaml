@@ -46,6 +46,9 @@ jobs:
   Deploy: 
     needs: Build 
     runs-on: ubuntu-latest
+    env: 
+        USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
+        PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
     steps: 
     - name: Checkout Repository 
       uses: actions/checkout@v3
@@ -60,9 +63,9 @@ jobs:
       with:
         name: artifacts
     - name: Deploy to Cloudhub 
-      env: 
-        USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
-        PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
+      #env: 
+       # USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
+        #PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy -e \
