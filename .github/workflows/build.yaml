@@ -20,7 +20,7 @@ jobs:
       - name: Setup Java JDK 11
         uses: actions/setup-java@v4.2.1
         with:
-          distribution: Corretto
+          distribution: oracle
           java-version: 11
           check-latest: false
           cache: maven
