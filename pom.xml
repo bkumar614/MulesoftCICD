@@ -31,22 +31,28 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
-						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>${app.runtime}</muleVersion>
-						<username>${anypoint.username}</username>
-						<password>${anypoint.password}</password>
-						<applicationName>${app.name}</applicationName>
-						<environment>${env}</environment>
-						<workerType>MICRO</workerType>
-						<region>us-east-2</region>
-						<workers>1</workers>
-						<objectStoreV2>true</objectStoreV2>
-						<!-- Start: SECURED PROPERTIES CI/CD -->
-						<properties>
-							<secure.key>${decryption.key}</secure.key>
-						</properties>
-						<!-- End: SECURED PROPERTIES CI/CD -->
-					</cloudHubDeployment>
+				<uri>https://anypoint.mulesoft.com</uri>
+				<muleVersion>${app.runtime}</muleVersion>
+				<!-- <username>${anypoint.username}</username> <password>${anypoint.password}</password> -->
+				<connectedAppClientId>e4a03475304348ce9ea2400ec9e4f799</connectedAppClientId>
+				<connectedAppClientSecret>E6E5DFdd62fB45ac8BBeB76ac30eB7e0</connectedAppClientSecret>
+				<connectedAppGrantType>client_credentials</connectedAppGrantType>
+				<properties>
+				<anypoint.platform.client_id>679e806612f845c0a34f9813b16fd8d6</anypoint.platform.client_id>
+				<anypoint.platform.client_secret>Fff327a87fb243768e878F81d2Ef6C16</anypoint.platform.client_secret>
+				</properties>
+				<applicationName>${app.name}</applicationName>
+				<environment>${env}</environment>
+				<workerType>MICRO</workerType>
+				<region>us-east-2</region>
+				<workers>1</workers>
+				<objectStoreV2>true</objectStoreV2>
+				<!-- Start: SECURED PROPERTIES CI/CD -->
+				<properties>
+				<secure.key>${decryption.key}</secure.key>
+				</properties>
+				<!-- End: SECURED PROPERTIES CI/CD -->
+				</cloudHubDeployment>
 					<classifier>---- select project type ----</classifier>
 				</configuration>
 			</plugin>
