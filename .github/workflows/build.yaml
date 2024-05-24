@@ -76,5 +76,5 @@ jobs:
         -Danypoint.password="$PASSWORD" \
         -Denv=dev \
         -DskipDeploymentVerification="true"
-        -Dskiptests
+        #-Dskiptests
     
