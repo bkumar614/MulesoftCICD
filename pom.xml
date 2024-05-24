@@ -38,8 +38,8 @@
 				<connectedAppClientSecret>E6E5DFdd62fB45ac8BBeB76ac30eB7e0</connectedAppClientSecret>
 				<connectedAppGrantType>client_credentials</connectedAppGrantType>
 				<properties>
-				<anypoint.platform.client_id>679e806612f845c0a34f9813b16fd8d6</anypoint.platform.client_id>
-				<anypoint.platform.client_secret>Fff327a87fb243768e878F81d2Ef6C16</anypoint.platform.client_secret>
+					<anypoint.platform.client_id>679e806612f845c0a34f9813b16fd8d6</anypoint.platform.client_id>
+					<anypoint.platform.client_secret>Fff327a87fb243768e878F81d2Ef6C16</anypoint.platform.client_secret>
 				</properties>
 				<applicationName>${app.name}</applicationName>
 				<environment>${env}</environment>
