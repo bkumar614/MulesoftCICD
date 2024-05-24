@@ -74,7 +74,7 @@ jobs:
         -Dmule.artifact=$artifactName \
         -Danypoint.username="$USERNAME" \
         -Danypoint.password="$PASSWORD" \
-        -Denv=Sandbox \
+        -Denv=Dev \
         -DskipDeploymentVerification="true"
         -Dskiptests
     
