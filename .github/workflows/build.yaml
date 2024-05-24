@@ -46,9 +46,9 @@ jobs:
   Deploy: 
     needs: Build 
     runs-on: ubuntu-latest
-    #env: 
-        #USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
-        #PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
+    env: 
+        USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
+        PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
         #CA_CLIENT_ID: ${{secrets.CA_CLIENT_ID}}
         #CA_CLIENT_SECRETS: ${{secrets.CA_CLIENT_SECRETs}}
     steps: 
