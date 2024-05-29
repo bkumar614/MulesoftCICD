@@ -74,5 +74,5 @@ jobs:
         -Danypoint.CA_CLIENT_SECRET="$CA_CLIENT_SECRET" \
         -Denv=dev \
         -DskipDeploymentVerification="true"
-        #-Dskiptests
+        -Dskiptests
     
