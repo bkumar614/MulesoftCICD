@@ -50,7 +50,7 @@ jobs:
         #USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
         #PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
         CA_CLIENT_ID: ${{secrets.CA_CLIENT_ID}}
-        CA_CLIENT_SECRETS: ${{secrets.CA_CLIENT_SECRETs}}
+        CA_CLIENT_SECRETS: ${{secrets.CA_CLIENT_SECRET}}
     steps: 
     - name: Checkout Repository 
       uses: actions/checkout@v3
