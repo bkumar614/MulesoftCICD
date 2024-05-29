@@ -65,9 +65,6 @@ jobs:
       with:
         name: artifacts
     - name: Deploy to Cloudhub 
-      #env: 
-        #USERNAME:$ {{ANYPOINT_USERNAME}}
-        #PASSWORD:$ {{ANYPOINT_PASSWORD}}
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy -e \
