@@ -65,6 +65,7 @@ jobs:
       with:
         name: artifacts
     - name: Deploy to Cloudhub 
+      run: echo "Value of MY_SECRET1: ${CA_CLIENT_ID}"
       #env: 
         #USERNAME:$ {{ANYPOINT_USERNAME}}
         #PASSWORD:$ {{ANYPOINT_PASSWORD}}
@@ -72,8 +73,8 @@ jobs:
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy -e \
         -Dmule.artifact=$artifactName \
-        -Danypoint.CA_CLIENT_ID="$CA_CLIENT_ID" \
-        -Danypoint.CA_CLIENT_SECRET="$CA_CLIENT_SECRET" \
+        -Danypoint.CA_CLIENT_ID=$CA_CLIENT_ID \
+        -Danypoint.CA_CLIENT_SECRET=$CA_CLIENT_SECRET \
         -Denv=dev \
         -DskipDeploymentVerification="true"
         #-Dskiptests
