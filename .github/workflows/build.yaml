@@ -46,11 +46,11 @@ jobs:
   Deploy: 
     needs: Build 
     runs-on: ubuntu-latest
-    env: 
+     # env: 
         #USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
         #PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
-        CA_CLIENT_ID: ${{secrets.CA_CLIENT_ID}}
-        CA_CLIENT_SECRETS: ${{secrets.CA_CLIENT_SECRET}}
+        #CA_CLIENT_ID: ${{secrets.CA_CLIENT_ID}}
+       # CA_CLIENT_SECRETS: ${{secrets.CA_CLIENT_SECRET}}
     steps: 
     - name: Checkout Repository 
       uses: actions/checkout@v3
