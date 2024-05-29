@@ -37,11 +37,6 @@
 				<connectedAppClientId>${anypoint.CA_CLIENT_ID}</connectedAppClientId>
 				<connectedAppClientSecret>${anypoint.CA_CLIENT_SECRET}</connectedAppClientSecret>
 				<connectedAppGrantType>client_credentials</connectedAppGrantType>
-				<!-- <properties>
-					<anypoint.platform.client_id>679e806612f845c0a34f9813b16fd8d6</anypoint.platform.client_id>
-					<anypoint.platform.client_secret>Fff327a87fb243768e878F81d2Ef6C16</anypoint.platform.client_secret>
-				 </properties>
-				--> 
 				<applicationName>${app.name}</applicationName> 
 				<environment>${env}</environment>
 				<workerType>MICRO</workerType>
