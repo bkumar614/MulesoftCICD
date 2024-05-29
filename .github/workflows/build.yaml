@@ -47,13 +47,11 @@ jobs:
     needs: Build 
     runs-on: ubuntu-latest
     env: 
-        #USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
-        #PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
       CA_CLIENT_ID: ${{secrets.CA_CLIENT_ID}}
       CA_CLIENT_SECRET: ${{secrets.CA_CLIENT_SECRET}}
     steps: 
     - name: Print client ID 
-      run: echo "CA_CLIENT_ID is $secrets.CA_CLIENT_ID"
+      run: echo "CA_CLIENT_ID is $CA_CLIENT_ID"
     - name: Checkout Repository 
       uses: actions/checkout@v3
     - name: Cache Dependencies 
@@ -74,8 +72,8 @@ jobs:
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy -e \
         -Dmule.artifact=$artifactName \
-        -Danypoint.CA_CLIENT_ID=$secrets.CA_CLIENT_ID \
-        -Danypoint.CA_CLIENT_SECRET=$secrets.CA_CLIENT_SECRET \
+        -Danypoint.CA_CLIENT_ID="$CA_CLIENT_ID" \
+        -Danypoint.CA_CLIENT_SECRET="$CA_CLIENT_SECRET" \
         -Denv=dev \
         -DskipDeploymentVerification="true"
         #-Dskiptests
