@@ -69,7 +69,6 @@ jobs:
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy -e \
         -Dmule.artifact=$artifactName \
-        -DmuleVersion=4.6.3 \
         -Danypoint.CA_CLIENT_ID="$CA_CLIENT_ID" \
         -Danypoint.CA_CLIENT_SECRET="$CA_CLIENT_SECRET" \
         -Denv=dev \
